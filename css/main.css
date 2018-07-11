@@ -22,7 +22,7 @@ body {
     color: #333;
   }
   to {
-    color: #FFF;
+    color: transparent;
     transform: translateY(-30px);
   }
 }
