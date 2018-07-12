@@ -56,6 +56,7 @@ body {
 .content footer nav ul li a {
   display: block;
   text-decoration: none;
+  font-family: 'Josefin Sans', 'Consola';
   background-color: #262626;
   color: white;
   padding: 1rem 2rem;
