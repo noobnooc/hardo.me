@@ -1,6 +1,8 @@
+const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -41,7 +43,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html")
     }),
-    // new ExtractTextPlugin("style.css"),
     new CleanWebpackPlugin("dist/*.*", {
       root: __dirname,
       verbose: true,
@@ -49,14 +50,15 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: path.join(__dirname, "assets"), to: path.join(__dirname, "dist") }
-    ])
+    ]),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
     extensions: [".json", ".js", ".jsx", ".css"]
   },
   devtool: "source-map",
   devServer: {
-    publicPath: path.join(__dirname, "dist"),
-    inline: true
+    inline: true,
+    hot: true,
   }
 };
