@@ -1,3 +1,5 @@
+import '../css/main.css';
+
 window.onload = function() {
   document.body.addEventListener('click', function (mouseEvent) {
     document.body.style.position = 'relative';
