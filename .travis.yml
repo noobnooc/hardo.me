@@ -1,0 +1,25 @@
+language: node_js
+node_js: "8"
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+    - node_modules
+
+install: npm install
+
+# 每次推送后需要执行的脚本
+script: 
+  - npm run build
+
+# 脚本执行成功后的后续命令
+after_success:
+  - cd ./dist
+  - git init
+  - git config user.name "Hardo"
+  - git config user.email "i@hardo.me"
+  - git add .
+  - git commit -m "Travis CI Auto Builder"
+  - git push --force https://$GITHUB_TOKEN@github.com/hardo/hardo.me.git master:gh-pages
