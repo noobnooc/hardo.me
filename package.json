@@ -1,0 +1,23 @@
+{
+  "name": "hardo.me",
+  "version": "1.0.0",
+  "description": "https://hardo.me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardo/hardo.me.git"
+  },
+  "keywords": [
+    "hardo",
+    "homepage"
+  ],
+  "author": "Hardo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hardo/hardo.me/issues"
+  },
+  "homepage": "https://github.com/hardo/hardo.me#readme"
+}
