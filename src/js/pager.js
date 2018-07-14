@@ -45,13 +45,15 @@ export default {
   },
   _addTouchListener() {
     document.addEventListener('touchstart', (evt) => {
+      this.scrolled = false;
       this.clientY = evt.touches[0].clientY;
     }, false);
     document.addEventListener('touchmove', (evt) => {
+      this.scrolled = true;
       this.newClientY = evt.touches[0].clientY;
     }, false);
     document.addEventListener('touchend', (evt) => {
-      console.log(evt.targetTouches);
+      if (!this.scrolled) return;
       if (this.clientY > this.newClientY) {
         this.pageDown();
       } else if (this.clientY < this.newClientY) {
