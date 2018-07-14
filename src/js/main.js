@@ -1,6 +1,9 @@
+import pager from './pager';
 import '../css/main.css';
 
+
 window.onload = function() {
+  pager.active('.pager');
   document.body.addEventListener('click', function (mouseEvent) {
     document.body.style.position = 'relative';
     generateBubble(mouseEvent.clientX, mouseEvent.clientY);

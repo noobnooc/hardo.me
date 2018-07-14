@@ -36,30 +36,74 @@ body {
   }
 }
 
-.content {
-  margin: auto 0;
+.pager,
+.pager-content,
+.pager .pager-content .page {
   width: 100%;
+  height: 100%;
+}
+
+.pager {
+  overflow: hidden;
+}
+
+.pager .pager-content {
+  transition: transform 1s ease;
+}
+
+.pager.active-page-1 .pager-content {
+  transform: translateY(0);
+}
+.pager.active-page-2 .pager-content {
+  transform: translateY(-100%);
+}
+.pager.active-page-3 .pager-content {
+  transform: translateY(-200%);
+}
+
+.badge-box {
+  position: fixed;
+  right: 10px;
+  top: 45%;
+  z-index: 1000;
+  text-shadow: 0 0 0 #262626;
+  color: transparent;
+}
+
+.badge-box .badge:hover {
+  cursor: pointer;
+  color: #FFF;
+}
+
+.pager.active-page-1 .badge-box .badge-1,
+.pager.active-page-2 .badge-box .badge-2,
+.pager.active-page-3 .badge-box .badge-3 {
+  color: #FFF;
+}
+
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.content > header > .logo {
+.page-1 > header > .logo {
   width: 250px;
 }
 
-.content > main > .favicon {
+.page-1 > main > .favicon {
   width: 250px;
   animation: self-rotate 3s linear infinite;
 }
 
-.content footer nav ul {
+.page-1 footer nav ul {
   padding: 0;
   list-style: none;
   display: flex;
 }
 
-.content footer nav ul li a {
+.page-1 footer nav ul li a {
   display: block;
   text-decoration: none;
   font-family: 'Josefin Sans', 'Consola';
@@ -69,11 +113,15 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.content footer nav ul li a:hover {
+.page-1 footer nav ul li a:hover {
   color: #262626;
   background-color: white;
 }
 
-.nav-item-icon {
-  display: inline-block;
+.page-2 {
+  background-color: lightseagreen;
+}
+
+.page-3 {
+  background-color: crimson;
 }
