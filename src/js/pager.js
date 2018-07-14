@@ -40,16 +40,16 @@ export default {
     badges.forEach((badge, index) => {
       badge.addEventListener('click', () => {
         this.switchPage(index + 1);
-      }, false);
+      }, true);
     });
   },
   _addTouchListener() {
     document.addEventListener('touchstart', (evt) => {
       this.clientY = evt.touches[0].clientY;
-    }, true);
+    }, false);
     document.addEventListener('touchmove', (evt) => {
       this.newClientY = evt.touches[0].clientY;
-    })
+    }, false);
     document.addEventListener('touchend', (evt) => {
       console.log(evt.targetTouches);
       if (this.clientY > this.newClientY) {
@@ -57,7 +57,7 @@ export default {
       } else if (this.clientY < this.newClientY) {
         this.pageUp();
       }
-    })
+    }, false);
   },
 
   pageDown() {
