@@ -11,6 +11,7 @@ export default {
   _addListener() {
     this._addMouseWheelListener();
     this._addBadgeClickListener();
+    this._addTouchListener();
   },
 
   _addMouseWheelListener() {
@@ -41,6 +42,22 @@ export default {
         this.switchPage(index + 1);
       }, false);
     });
+  },
+  _addTouchListener() {
+    document.addEventListener('touchstart', (evt) => {
+      this.clientY = evt.touches[0].clientY;
+    }, true);
+    document.addEventListener('touchmove', (evt) => {
+      this.newClientY = evt.touches[0].clientY;
+    })
+    document.addEventListener('touchend', (evt) => {
+      console.log(evt.targetTouches);
+      if (this.clientY > this.newClientY) {
+        this.pageDown();
+      } else if (this.clientY < this.newClientY) {
+        this.pageUp();
+      }
+    })
   },
 
   pageDown() {
