@@ -75,6 +75,11 @@ export default {
     this.pager.classList.remove(`active-page-${this.currentPage}`);
     this.currentPage = page;
     this.pager.classList.add(`active-page-${this.currentPage}`);
+    if (this.currentPage === 1) {
+      document.body.style.overscrollBehaviorY = 'auto';
+    } else {
+      document.body.style.overscrollBehaviorY = 'contain';
+    }
   }
   
 }
