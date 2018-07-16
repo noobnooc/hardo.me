@@ -68,6 +68,11 @@ body {
   z-index: 1000;
   text-shadow: 0 0 0 #262626;
   color: transparent;
+  transition: text-shadow 1s;
+}
+
+.pager.active-page-2 .badge-box {
+  text-shadow: 0 0 0 white;
 }
 
 .badge-box .badge:hover {
@@ -119,9 +124,57 @@ body {
 }
 
 .page-2 {
-  background-color: white;
+  background-color: #262626;
 }
 
 .page-3 {
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.page-3 h1 {
+  margin: 20px 0 10px 0;
+  border-left: 5px solid #262626;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  color: #262626;
+}
+
+.page-3 p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+.page-3 a,
+.page-3 a:visited {
+  display: inline-block;
+  padding: 3px 5px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #262626;
+}
+.page-3 a::before {
+  content: "⚑";
+  margin-right: 5px;
+}
+.page-3 a:hover {
+  color: #262626;
+  background-color: #FFF;
+  text-decoration: underline;
+}
+.page-3 .content {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
