@@ -154,10 +154,11 @@ body {
 .page-3 a:visited {
   display: inline-block;
   padding: 3px 5px;
-  margin: 2px 5px;
+  margin: 2px;
   text-decoration: none;
   color: #FFF;
   background-color: #262626;
+  transition: all 0.3s;
 }
 .page-3 a::before {
   content: "⚑";
@@ -167,6 +168,9 @@ body {
   color: #262626;
   background-color: #FFF;
   text-decoration: underline;
+}
+.page-3 a:hover::before {
+  content: "⚐";
 }
 .page-3 .content {
   width: 100%;
