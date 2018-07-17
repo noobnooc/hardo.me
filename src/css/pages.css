@@ -1,0 +1,89 @@
+
+.page-1 > header > .logo {
+  width: 250px;
+}
+
+.page-1 > main > .favicon {
+  width: 250px;
+  animation: self-rotate 3s linear infinite;
+}
+
+.page-1 footer nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.page-1 footer nav ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: #262626;
+  color: white;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-1 footer nav ul li a:hover {
+  color: #262626;
+  background-color: white;
+}
+
+.page-2 {
+  background-color: #262626;
+}
+
+.page-3 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.page-3 h1 {
+  margin: 20px 0 10px 0;
+  border-left: 5px solid #262626;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  color: #262626;
+}
+
+.page-3 p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+.page-3 a,
+.page-3 a:visited {
+  display: inline-block;
+  padding: 3px 5px;
+  margin: 2px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #262626;
+  transition: all 0.3s;
+}
+.page-3 a::before {
+  content: "⚑";
+  margin-right: 5px;
+}
+.page-3 a:hover {
+  color: #262626;
+  background-color: #FFF;
+  text-decoration: underline;
+}
+.page-3 a:hover::before {
+  content: "⚐";
+}
+.page-3 .content {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
