@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   textList: [
     "富强",
     "民主",
