@@ -14,6 +14,7 @@ export default {
     this._addTouchListener();
   },
 
+  // 添加鼠标滚动监听器
   _addMouseWheelListener() {
     
     // Chrome/IE/Safari/Edge
@@ -35,6 +36,7 @@ export default {
     }, false)
   },
 
+  // 添加徽章图标点击事件监听器
   _addBadgeClickListener() {
     const badges = document.querySelectorAll(this.selector + ' .badge');
     badges.forEach((badge, index) => {
@@ -43,6 +45,8 @@ export default {
       }, true);
     });
   },
+
+  // 添加触屏滑动事件监听器
   _addTouchListener() {
     document.addEventListener('touchstart', (evt) => {
       this.scrolled = false;
@@ -62,13 +66,17 @@ export default {
     }, false);
   },
 
+  // 向下翻页
   pageDown() {
     this.switchPage(this.currentPage + 1);
   },
 
+  // 向上翻页
   pageUp() {
     this.switchPage(this.currentPage - 1);
   },
+
+  // 切换到指定页
   switchPage(page) {
     if (this.shaking) return;
     this.shaking = true;
