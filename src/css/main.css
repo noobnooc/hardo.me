@@ -16,7 +16,7 @@ body {
 
 @keyframes bubble {
   from {
-    color: #333;
+    color: #888;
   }
   to {
     color: transparent;
