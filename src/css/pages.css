@@ -1,4 +1,13 @@
+.page .content {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+}
 
+
+/* 第一页 */
 .page-1 > header > .logo {
   width: 250px;
 }
@@ -28,15 +37,43 @@
   background-color: white;
 }
 
+
+/* 第二页 */
 .page-2 {
   background-color: #262626;
 }
 
+.page-2 .content {
+  flex-direction: column;
+}
+
+.page-2 .code-box {
+  color: #FFF;
+  font-family: 'Consolas', 'Josefin Sans';
+}
+.page-2 .code-box .code-line {
+  margin: 0;
+  padding: 0;
+}
+.page-2 .code-box .code-line::before {
+  content: 'hardo:~$';
+  margin-right: 5px;
+  color: #34A853;
+}
+
+
+/* 第三页 */
 .page-3 {
   background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.page-3 .content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .page-3 h1 {
@@ -76,14 +113,4 @@
 }
 .page-3 a:hover::before {
   content: "⚐";
-}
-.page-3 .content {
-  width: 100%;
-  max-width: 800px;
-  box-sizing: border-box;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
