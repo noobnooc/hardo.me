@@ -13,6 +13,11 @@ window.onload = function() {
   bubble.active('.pager');
   typer.active('.code-box', [
     'echo hello world',
-    'echo im hardo'
+    'echo This is Hardo',
+    'echo A web developer',
+    'echo If you wanna contact me',
+    'echo Plz send email to i@hardo.me',
+    'echo Thanks!',
+    'exit'
   ]);
 }
