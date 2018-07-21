@@ -52,7 +52,7 @@
   font-family: 'Ubuntu Mono', monospace, 'Consolas', 'Josefin Sans';
 }
 .page-2 .code-box .code-line {
-  margin: 0;
+  margin: 2px 0;
   padding: 0;
 }
 .page-2 .code-box .code-line::before {
