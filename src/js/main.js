@@ -9,8 +9,6 @@ import '../css/pages.css';
 
 
 window.onload = function() {
-  pager.active('.pager');
-  bubble.active('.pager');
   typer.active('.code-box', [
     'echo hello world',
     'echo This is Hardo',
@@ -20,4 +18,10 @@ window.onload = function() {
     'echo Thanks!',
     'exit'
   ]);
+  pager.active('.pager', (page) => {
+    if (page === 2) {
+      typer.start();
+    }
+  });
+  bubble.active('.pager');
 }

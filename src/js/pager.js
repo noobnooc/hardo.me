@@ -1,9 +1,10 @@
 export default {
-  active(selector) {
+  active(selector, onpager) {
     this.selector = selector;
     this.currentPage = 1;
     this.totalPages = 0;
     this.shaking = false;
+    this.onpager = onpager;
     this.pager = document.querySelector(selector);
     this.totalPages = document.querySelectorAll(selector + ' .page').length;
     this._addListener();
@@ -82,6 +83,7 @@ export default {
     this.shaking = true;
     setTimeout(() => this.shaking = false, 1000);
     if (page < 1 || page > this.totalPages) return;
+    this.onpager(page);
     this.pager.classList.remove(`active-page-${this.currentPage}`);
     this.currentPage = page;
     this.pager.classList.add(`active-page-${this.currentPage}`);

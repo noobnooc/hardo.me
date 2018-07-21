@@ -4,9 +4,11 @@ export default {
     this.codeBoxEle = document.querySelector(el);
     this.codeList = codeList;
 
-    this.start();
+    this.started = false;
   },
   start() {
+    if (this.started) return;
+    this.started = true;
     this._startType();
   },
 
