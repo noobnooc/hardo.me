@@ -21,15 +21,16 @@ export default {
     bubble.className = "bubble";
     bubble.style.position = "absolute";
 
-    document.body.appendChild(bubble);
+    this.parentEle.appendChild(bubble);
 
     bubble.style.top = y - bubble.offsetHeight / 2 + "px";
     bubble.style.left = x - bubble.offsetWidth / 2 + "px";
-    setTimeout(() => document.body.removeChild(bubble), 900);
+    setTimeout(() => this.parentEle.removeChild(bubble), 900);
   },
 
-  active() {
-    document.body.addEventListener(
+  active(el) {
+    this.parentEle = document.querySelector(el);
+    this.parentEle.addEventListener(
       "click",
       (mouseEvent) => {
         document.body.style.position = "relative";

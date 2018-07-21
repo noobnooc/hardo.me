@@ -10,7 +10,7 @@ import '../css/pages.css';
 
 window.onload = function() {
   pager.active('.pager');
-  bubble.active();
+  bubble.active('.pager');
   typer.active('.code-box', [
     'echo hello world',
     'echo im hardo'

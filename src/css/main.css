@@ -14,9 +14,19 @@ body {
   font-family: 'Josefin Sans', 'Consolas';
 }
 
-@keyframes bubble {
+@keyframes bubble-black {
   from {
-    color: #888;
+    color: #262626;
+  }
+  to {
+    color: transparent;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes bubble-white {
+  from {
+    color: #FFF;
   }
   to {
     color: transparent;
@@ -25,7 +35,7 @@ body {
 }
 
 .bubble {
-  animation: bubble 1s ease;
+  animation: bubble-black 1s ease;
 }
 
 @keyframes self-rotate {

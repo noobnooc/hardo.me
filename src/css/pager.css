@@ -37,6 +37,9 @@
 .pager.active-page-2 .badge-box {
   text-shadow: 0 0 0 white;
 }
+.pager.active-page-2 .bubble {
+  animation: bubble-white 1s ease;
+}
 
 .badge-box .badge:hover {
   cursor: pointer;
