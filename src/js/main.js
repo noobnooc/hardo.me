@@ -20,7 +20,9 @@ window.onload = function() {
   ]);
   pager.active('.pager', (page) => {
     if (page === 2) {
-      typer.start();
+      setTimeout(() => {
+        typer.start();
+      }, 1000);
     }
   });
   bubble.active('.pager');
