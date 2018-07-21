@@ -49,7 +49,7 @@
 
 .page-2 .code-box {
   color: #FFF;
-  font-family: 'Consolas', 'Josefin Sans';
+  font-family: 'Ubuntu Mono', monospace, 'Consolas', 'Josefin Sans';
 }
 .page-2 .code-box .code-line {
   margin: 0;
