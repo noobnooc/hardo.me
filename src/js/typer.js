@@ -3,6 +3,9 @@ export default {
     // 初始化一些数据
     this.codeBoxEle = document.querySelector(el);
     this.codeList = codeList;
+    this.lineEle = null;
+    this.typedLine = '';
+    this.cursor = false;
 
     this.started = false;
   },
@@ -13,30 +16,45 @@ export default {
   },
 
   async _startType() {
+    this._blinkCursor();
     for (let line of this.codeList) {
       let lineEle = document.createElement('p');
       lineEle.className = 'code-line';
       this.codeBoxEle.append(lineEle);
-      await this._typeLine(lineEle, line);
+      this.cursor = false;
+      this._print();
+      this.lineEle = lineEle;
+      this.typedLine = '';
+      await this._typeLine(line);
     }
   },
 
-  async _typeLine(ele, line) {
-    if (this.lineIndex >= this.codeList.length) return;
-    let typed = '';
+  async _typeLine(line) {
     for (let char of line) {
-      typed += char;
-      await this._type(ele, typed);
+      await this._type(char);
     }
   },
 
-  _type(ele, typed) {
+  _blinkCursor() {
+    setInterval(() => {
+      this.cursor = !this.cursor;
+      this._print();
+    }, 500);
+  },
+
+  _type(char) {
     return new Promise((resolve) => {
-      const timeout = Math.floor(Math.random() * 50 + 100);
+      const timeout = Math.floor(Math.random() * 50 + 50);
       setTimeout(() => {
-        ele.innerText = typed;
+        this.typedLine += char;
+        this._print();
         resolve();
       }, timeout);
     })
+  },
+
+  _print() {
+    if (!this.lineEle) return;
+    this.lineEle.innerText = this.typedLine + (this.cursor ? '_' : '');
   }
 }
