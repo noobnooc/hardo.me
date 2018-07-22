@@ -44,7 +44,7 @@ export default {
 
   _type(char) {
     return new Promise(resolve => {
-      const timeout = Math.floor(Math.random() * 50 + 50);
+      const timeout = Math.floor(Math.random() * 50 + 80);
       setTimeout(() => {
         this.typedLine += char;
         this._print();
@@ -73,6 +73,15 @@ export default {
     this._print();
     this.lineEle = lineEle;
     this.typedLine = '';
+    await this.sleep(800);
     await this._typeLine(line);
+  },
+
+  async sleep(time) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, time);
+    })
   }
 };
