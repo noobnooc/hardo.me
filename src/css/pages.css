@@ -55,7 +55,7 @@
   margin: 2px 0;
   padding: 0;
 }
-.page-2 .code-box .code-line::before {
+.page-2 .code-box .input-line::before {
   content: 'hardo:~$';
   margin-right: 5px;
   color: #34A853;
