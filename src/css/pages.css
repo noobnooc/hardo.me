@@ -8,6 +8,9 @@
 
 
 /* 第一页 */
+.page-1 {
+  background-color: #FFF;
+}
 .page-1 > header > .logo {
   width: 250px;
 }
@@ -40,7 +43,7 @@
 
 /* 第二页 */
 .page-2 {
-  background-color: #262626;
+  background-color: #000;
 }
 
 .page-2 .content {

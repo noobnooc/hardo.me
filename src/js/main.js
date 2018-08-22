@@ -34,4 +34,12 @@ window.onload = function() {
     }
   });
   bubble.active('.pager');
+  document.querySelector('.page-1 .favicon')
+    .addEventListener('click', (event) => {
+      if (document.body.classList.contains('invert')) {
+        document.body.classList.remove('invert');
+      } else {
+        document.body.classList.add('invert');
+      }
+    })
 }
