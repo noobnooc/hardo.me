@@ -15,8 +15,20 @@ body {
   transition: filter 1s;
 }
 
+body.normal {
+  filter: none;
+}
 body.invert {
   filter: invert(100%);
+}
+body.sepia {
+  filter: sepia(100%);
+}
+body.hue-rotate {
+  filter: hue-rotate(180deg);
+}
+body.blur {
+  filter: blur(1px);
 }
 
 @keyframes bubble-black {
