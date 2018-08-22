@@ -1,12 +1,12 @@
 import pager from './pager';
 import bubble from './bubble';
 import typer from './typer';
+import theme from './theme';
 
 // 导入CSS文件
 import '../css/main.css';
 import '../css/pager.css';
 import '../css/pages.css';
-import theme from './theme';
 
 
 window.onload = function() {
