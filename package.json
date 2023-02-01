@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hardo/hardo.me.git"
+    "url": "git+https://github.com/noobnooc/hardo.me.git"
   },
   "keywords": [
     "hardo",
@@ -19,9 +19,9 @@
   "author": "Hardo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hardo/hardo.me/issues"
+    "url": "https://github.com/noobnooc/hardo.me/issues"
   },
-  "homepage": "https://github.com/hardo/hardo.me#readme",
+  "homepage": "https://github.com/noobnooc/hardo.me#readme",
   "devDependencies": {
     "autoprefixer": "^8.6.5",
     "babel-core": "^6.21.0",
